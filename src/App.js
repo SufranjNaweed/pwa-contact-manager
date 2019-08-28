@@ -5,9 +5,11 @@ import ContactContainer from './Component/ContactContainer';
 function App() {
   return (
     <div className="App">
+      <h1>Contact Manager</h1>
       <header className="App-header">
         <ul>
           <li>Contact</li>
+          <li>About</li>
           <li>About</li>
         </ul>
       </header>
