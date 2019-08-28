@@ -258,10 +258,23 @@ class ContactContainer extends Component {
         ]
     }
 
+    clickItem(id){
+      console.log(id);
+    }
+
+    deleteContact = (id) => {
+      this.setState({ contacts : [...this.state.contacts.filter(contact => contact.id !== id)] })
+    }
+
     render(){
         return(
             this.state.contacts.map((contact) => (
-                <ContactItem contact={contact} key={contact.id} />
+                <ContactItem 
+                  contact={contact} 
+                  key={contact.id} 
+                  clickItem={this.clickItem} 
+                  deleteContact={this.deleteContact} 
+                />
             ))
         )
     }
