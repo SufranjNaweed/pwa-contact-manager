@@ -1,20 +1,17 @@
 import React from 'react';
 import './App.css';
+
+import Header from './Component/layout/Header';
 import ContactContainer from './Component/ContactContainer';
+import AddContact from './Component/AddContact';
 
 function App() {
   return (
     <div className="App">
       <h1>Contact Manager</h1>
-      <header className="App-header">
-        <ul>
-          <li>Contact</li>
-          <li>About</li>
-          <li>About</li>
-        </ul>
-      </header>
-
+      <Header />
       <div className="container">
+        <AddContact />
         <ContactContainer />
       </div>
     </div>
