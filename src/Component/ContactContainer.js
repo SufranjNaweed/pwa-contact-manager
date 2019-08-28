@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
+import gravatar from 'gravatar';
+
 import ContactItem from './ContactItem';
+import AddContactForm from './AddContactForm';
+
+
 
 class ContactContainer extends Component {
     
     state  = {
         contacts : [
             {
-              "id": 1,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/315aa6",
               "thumbnailUrl": "https://via.placeholder.com/150/315aa6",
               "name": "Leanne Graham",
@@ -31,7 +37,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 2,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/1b9d08",
               "thumbnailUrl": "https://via.placeholder.com/150/1b9d08",
               "name": "Ervin Howell",
@@ -56,7 +62,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 3,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/1b9d08",
               "thumbnailUrl": "https://via.placeholder.com/150/1b9d08",
               "name": "Clementine Bauch",
@@ -81,7 +87,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 4,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/1b9d08",
               "thumbnailUrl": "https://via.placeholder.com/150/1b9d08",
               "name": "Patricia Lebsack",
@@ -106,7 +112,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 5,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/ec87f",
               "thumbnailUrl": "https://via.placeholder.com/150/ec87f",
               "name": "Chelsey Dietrich",
@@ -131,7 +137,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 6,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/315aa6",
               "thumbnailUrl": "https://via.placeholder.com/150/315aa6",
               "name": "Mrs. Dennis Schulist",
@@ -156,7 +162,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 7,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/1b9d08",
               "thumbnailUrl": "https://via.placeholder.com/150/1b9d08",
               "name": "Kurtis Weissnat",
@@ -181,7 +187,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 8,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/1b9d08",
               "thumbnailUrl": "https://via.placeholder.com/150/1b9d08",
               "name": "Nicholas Runolfsdottir V",
@@ -206,7 +212,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 9,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/1b9d08",
               "thumbnailUrl": "https://via.placeholder.com/150/1b9d08",
               "name": "Glenna Reichert",
@@ -231,7 +237,7 @@ class ContactContainer extends Component {
               }
             },
             {
-              "id": 10,
+              "id": uuid.v4(),
               "url": "https://via.placeholder.com/600/ec87f",
               "thumbnailUrl": "https://via.placeholder.com/150/ec87f",
               "name": "Clementina DuBuque",
@@ -266,16 +272,36 @@ class ContactContainer extends Component {
       this.setState({ contacts : [...this.state.contacts.filter(contact => contact.id !== id)] })
     }
 
+    addContact = (newContact) => {
+      const  avatar = gravatar.url(newContact.email, {
+        // s: size, r : rating, d: ??
+        s: "150", r: "pg", d : 'mm'
+      });
+
+      newContact.id = uuid.v4();
+      newContact.url = avatar;
+      newContact.thumbnailUrl = avatar;
+
+      this.setState({ contacts : [...this.state.contacts, newContact]})
+    }
+
     render(){
         return(
-            this.state.contacts.map((contact) => (
-                <ContactItem 
-                  contact={contact} 
-                  key={contact.id} 
-                  clickItem={this.clickItem} 
-                  deleteContact={this.deleteContact} 
-                />
-            ))
+          <div>
+            <AddContactForm
+              addContact={this.addContact}
+            />,
+            {
+              this.state.contacts.map((contact) => (
+                  <ContactItem 
+                    contact={contact} 
+                    key={contact.id} 
+                    clickItem={this.clickItem} 
+                    deleteContact={this.deleteContact}
+                  />
+              ))
+            }
+          </div>
         )
     }
 }
