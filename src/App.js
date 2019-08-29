@@ -9,7 +9,7 @@ import About from './Component/page/About';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/pwa-contact-manager">
       <div className="App">
         <h1>Contact Manager</h1>
         <Header />
@@ -21,12 +21,12 @@ function App() {
               <ContactContainer />
             </div>
           </React.Fragment>
-        )} />
+          )} 
+        />
         <Route 
-          exact path="/about"
+          path="/about/"
           component={About}
         />
-
       </div>
     </Router>
   );
