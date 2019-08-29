@@ -6,9 +6,9 @@ export default function About() {
             <div id="about" className="container">
                 <h2>About</h2>
                 <p id="presentation">
-                    This is a student projet made with react and it's a Progressive Web App oriented.
+                    This is a student projet made with React JS and it's a Progressive Web App oriented.
                     <br />
-                    Therefor you can install this web app into your mobile phone (Android or Iphone) 
+                    Therefore you can install this web app on your mobile phone (Android or Iphone) 
                 </p>
                 <h2>How to install ?</h2>
                 <div className="content-install-instruction">
