@@ -2,6 +2,7 @@
   "name": "pwa-contact-manager",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sufranjnaweed.github.io/pwa-contact-manager/",
   "dependencies": {
     "axios": "^0.19.0",
     "gravatar": "^1.8.0",
