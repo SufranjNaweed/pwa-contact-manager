@@ -23,17 +23,17 @@ ul{
   margin-right: auto;
 }
 
-/*
-  App
-*/
+/* ---------
+    App
+---------- */
 
 .App{
   position: relative;
 }
 
-/*
+/* ------------
   App-header
-*/
+-------------- */
 .App-header{
   width: 100%;
   position: fixed;
@@ -50,38 +50,94 @@ ul{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-decoration: none !important;
 }
 .App-header ul li {
-  padding: 10px 20px;
+  
   width: 100%;
   text-align: center;
   background-color: #0984e3;
   transition: 0.3s ease-in all;
+  text-decoration: none !important;
+  text-decoration: unset;
+  color: white;
 }
 .App-header ul li:hover{
   background-color: #74b9ff;
   cursor: pointer;
 }
 
-/*
-  Contact item
-*/
+.App-header ul li a{
+  padding: 10px 20px;
+  display: block;
+  width: 100%;
+  color:  #fff;
+  text-decoration: none !important;
+}
+
+/* -----------------
+      Formulaire
+-------------------*/
+
+form.AddNewContact{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+form.AddNewContact input{
+  width: 50%;
+  padding: 10px 20px;
+  margin: 20px auto;
+  font-size: 16px;
+  border: 1px solid black;
+  border-top: unset;
+  border-left: unset;
+  border-right: unset;
+  transition: 0.3s linear all;
+}
+
+form.AddNewContact input::placeholder{
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+form.AddNewContact input:focus{
+  border-bottom-color: #0984e3;
+  color: #0984e3;
+  transition: 0.3s linear all;
+}
+
+form.AddNewContact input[type=submit]{
+  background-color: #2ecc71;
+  color: white;
+  border: 1px solid #2ecc71;
+  text-transform: uppercase;
+  transition: 0.3s linear all;
+}
+form.AddNewContact input[type=submit]:hover{
+  background-color: white;
+  color: #2ecc71;
+}
+
+/*------------------
+    Contact item
+--------------------*/
 .contact-item{
   max-width: 700px;
   margin: 50px auto;
-  border-radius: 4px;
   display: flex;
   justify-content: space-between;
   transition: 0.3s linear all;
   border: solid 1px #dfe6e9;
 }
 
-
-
 .contact-item:hover{
   -webkit-box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.3);
   -moz-box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.3);
   box-shadow: 1px 1px 20px 5px rgba(0,0,0,0.3);
+  border: solid 1px transparent;
 }
 
 .contact-item .img-container{
@@ -98,12 +154,14 @@ ul{
   flex-direction: column;
   flex-wrap: wrap;
 }
+
 .contact-item .content ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: 13px;
 }
+
 .contact-item .deleteButton{
   display: flex;
   align-items: center;
@@ -111,14 +169,64 @@ ul{
 
   width: 10%;
   background-color: #d63031;
+  border: 1px solid #d63031;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 
   cursor: pointer;
 }
 
+.contact-item .deleteButton:hover{
+  color: #d63031;
+  background-color: white;
+  border: 1px solid #d63031;
+}
+.contact-item .deleteButton svg {
+  fill: #fff !important;
+  transition: 0.3s linear all;
+  
+}
 
+.contact-item .deleteButton:hover svg{
+  fill: #d63031 !important;
+}
 
+/* -----------------
+      ABOUT
+------------------ */
+#about{
+
+}
+#about p{
+  margin: 20px auto;
+}
+
+#about h2{
+  text-align: center;
+  margin: 20px auto;
+}
+
+#about .content-install-instruction{
+  display: inline-block;
+  width: 48%;
+  margin: 30px auto;
+}
+
+#about .content-install-instruction h3{
+  text-align: center;
+}
+
+#about .content-install-instruction p{
+  padding: 15px 10px;
+  margin: 20px auto;
+}
+
+#presentation{
+  text-align:  center;
+}
+/* ------------------
+      RESPONSIVE 
+------------------- */
 
 @media screen and (max-width: 768px){
   .contact-item{
@@ -131,5 +239,12 @@ ul{
     text-align: center;
     padding: 15px 10px;
     margin: 0;
+  }
+
+  form.AddNewContact{
+    width: 90%;
+  }
+  form.AddNewContact input{
+    width: 100%;
   }
 }
