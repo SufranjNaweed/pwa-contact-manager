@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pwa-contact-manager/static/css/main.a80240ea.chunk.css",
+    "main.js": "/pwa-contact-manager/static/js/main.ecf74b83.chunk.js",
+    "main.js.map": "/pwa-contact-manager/static/js/main.ecf74b83.chunk.js.map",
+    "runtime~main.js": "/pwa-contact-manager/static/js/runtime~main.366ceadd.js",
+    "runtime~main.js.map": "/pwa-contact-manager/static/js/runtime~main.366ceadd.js.map",
+    "static/js/2.143363a3.chunk.js": "/pwa-contact-manager/static/js/2.143363a3.chunk.js",
+    "static/js/2.143363a3.chunk.js.map": "/pwa-contact-manager/static/js/2.143363a3.chunk.js.map",
+    "index.html": "/pwa-contact-manager/index.html",
+    "precache-manifest.e8ee8d9f872cdedce7c9376334dec635.js": "/pwa-contact-manager/precache-manifest.e8ee8d9f872cdedce7c9376334dec635.js",
+    "service-worker.js": "/pwa-contact-manager/service-worker.js",
+    "static/css/main.a80240ea.chunk.css.map": "/pwa-contact-manager/static/css/main.a80240ea.chunk.css.map"
+  }
+}
