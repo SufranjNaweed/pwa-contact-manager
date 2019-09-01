@@ -20,24 +20,29 @@ export default class AddContactForm extends Component{
 
     onSubmit = (e) => {
         e.preventDefault();
-        const newContact = {
-            name:  this.state.name,
-            username: this.state.username,
-            email: this.state.email,
-            website: this.state.website,
-            phone: this.state.phone
+
+        if (this.state.name === "" || this.state.user === "" || this.state.email === ""){
+            return 1;
         }
+        else{
+            const newContact = {
+                name:  this.state.name,
+                username: this.state.username,
+                email: this.state.email,
+                website: this.state.website,
+                phone: this.state.phone
+            }
+    
+            this.setState({
+                name: '',
+                username: '',
+                email:'',
+                website: '',
+                phone: '',
+            });
 
-        this.setState({
-            name: '',
-            username: '',
-            email:'',
-            website: '',
-            phone: '',
-        });
-
-        //console.log(newContact);
-        this.props.addContact(newContact);
+            this.props.addContact(newContact);
+        }
     }
 
     render(){
