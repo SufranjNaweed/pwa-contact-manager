@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pwa-contact-manager/static/css/main.79584fb8.chunk.css",
-    "main.js": "/pwa-contact-manager/static/js/main.dda2bd02.chunk.js",
-    "main.js.map": "/pwa-contact-manager/static/js/main.dda2bd02.chunk.js.map",
+    "main.css": "/pwa-contact-manager/static/css/main.63fa0240.chunk.css",
+    "main.js": "/pwa-contact-manager/static/js/main.66f5b1bf.chunk.js",
+    "main.js.map": "/pwa-contact-manager/static/js/main.66f5b1bf.chunk.js.map",
     "runtime~main.js": "/pwa-contact-manager/static/js/runtime~main.366ceadd.js",
     "runtime~main.js.map": "/pwa-contact-manager/static/js/runtime~main.366ceadd.js.map",
     "static/js/2.143363a3.chunk.js": "/pwa-contact-manager/static/js/2.143363a3.chunk.js",
     "static/js/2.143363a3.chunk.js.map": "/pwa-contact-manager/static/js/2.143363a3.chunk.js.map",
     "index.html": "/pwa-contact-manager/index.html",
-    "precache-manifest.1ec18030ddb4a0432b2760f376f28db6.js": "/pwa-contact-manager/precache-manifest.1ec18030ddb4a0432b2760f376f28db6.js",
+    "precache-manifest.14ab7d442eabf357cef4300f57d35b08.js": "/pwa-contact-manager/precache-manifest.14ab7d442eabf357cef4300f57d35b08.js",
     "service-worker.js": "/pwa-contact-manager/service-worker.js",
-    "static/css/main.79584fb8.chunk.css.map": "/pwa-contact-manager/static/css/main.79584fb8.chunk.css.map"
+    "static/css/main.63fa0240.chunk.css.map": "/pwa-contact-manager/static/css/main.63fa0240.chunk.css.map"
   }
 }
